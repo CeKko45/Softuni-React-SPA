@@ -1,28 +1,42 @@
+import { useContext } from "react"
+import { Link } from "react-router-dom"
 
+import AuthContext from "../../contexts/authContext"
+import Path from "../../src/paths";
 
 export default function Header() {
+    const {
+        isAuthenticated,
+        username,
+    } = useContext(AuthContext);
 
 
     return (
         <header>
-            <title>Classic Muscle</title>
-
             <nav>
+
                 <ul>
-                    {/* <!--For all users--> */}
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Catalog</a></li>
-                    {/* <!--For loggin users--> */}
-                    <li><a href="#">Create Car</a></li>
-                    <li><a href="#">Logout</a></li>
-                    {/* <!--For guest user--> */}
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><Link className="home" to={Path.Home}>Home</Link></li>
+                    <li><Link to={Path.CarList}>Catalog</Link></li>
+                    {isAuthenticated && (
+                        <div id="user">
+
+                            <li><Link to={Path.CarCreate}>Create Car</Link></li>
+                            <li><Link to={Path.Logout}>Logout</Link></li>
+                            <span>| {username} |</span>
+                        </div>
+                    )}
+                    {!isAuthenticated && (
+                        <div id="guest">
+
+                            <li><Link to={Path.Login}>Login</Link></li>
+                            <li><Link to={Path.Register}>Register</Link></li>
+                        </div>
+                    )}
 
                 </ul>
 
             </nav>
-
         </header>
 
     )
