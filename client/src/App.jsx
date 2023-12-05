@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
-import { AuthProvider } from "../contexts/authContext";
+import { AuthProvider } from "./contexts/authContext";
 import Path from "./paths";
 
-import Header from "../components/header/Header"
-import Home from "../components/Home/Home";
-import Register from "../components/register/Register";
-import Login from "../components/login/Login";
-import Logout from "../components/logout/Logout";
-import AuthGuard from "../components/routeGuards/AuthGuard";
+import Header from "../src/components/header/Header"
+import Home from "../src/components/home/Home";
+import Register from "../src/components/register/Register";
+import Login from "../src/components/login/Login";
+import Logout from "../src/components/logout/Logout";
+import AuthGuard from "../src/components/routeGuards/AuthGuard";
 
 
 function App() {

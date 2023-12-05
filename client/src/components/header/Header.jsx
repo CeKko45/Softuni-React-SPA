@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { Link } from "react-router-dom"
 
 import AuthContext from "../../contexts/authContext"
-import Path from "../../src/paths";
+import Path from "../../paths";
 
 export default function Header() {
     const {
