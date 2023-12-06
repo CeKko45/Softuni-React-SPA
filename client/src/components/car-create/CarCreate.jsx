@@ -13,7 +13,7 @@ export default function CarCreate() {
         try {
             await carService.create(carData);
 
-            navigate('/games');
+            navigate('/cars');
         } catch (err) {
             console.log(err);
         }
@@ -60,14 +60,6 @@ export default function CarCreate() {
                     id="image"
                     name="image"
                     placeholder="Image..."
-                />
-
-                <label htmlFor="price">Price:</label>
-                <input
-                    type="number"
-                    id="price"
-                    name="price"
-                    placeholder="Price..."
                 />
 
                 <label htmlFor="description">Description:</label>
