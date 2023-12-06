@@ -20,7 +20,6 @@ export default function Header() {
                     <li><Link to={Path.CarList}>Catalog</Link></li>
                     {isAuthenticated && (
                         <div id="user">
-
                             <li><Link to={Path.CarCreate}>Create Car</Link></li>
                             <li><Link to={Path.Logout}>Logout</Link></li>
                             <span>| {username} |</span>
@@ -28,7 +27,6 @@ export default function Header() {
                     )}
                     {!isAuthenticated && (
                         <div id="guest">
-
                             <li><Link to={Path.Login}>Login</Link></li>
                             <li><Link to={Path.Register}>Register</Link></li>
                         </div>
