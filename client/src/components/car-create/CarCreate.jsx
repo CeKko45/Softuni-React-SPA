@@ -70,7 +70,7 @@ export default function CarCreate() {
                     placeholder="Description..."
                 />
 
-                <input type="submit" class="create" value="Create Offer" />
+                <input type="submit" className="create" value="Create Offer" />
             </form>
         </section>
     );

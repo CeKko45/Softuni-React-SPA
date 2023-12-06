@@ -1,34 +1,23 @@
 {
-    "3564027f-adcd-4425-b2c0-1253d2386c0c": {
-        "title": "Test game",
-        "category": "Fantasy",
-        "maxLevel": "112",
-        "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/552700/extras/MainCapsule_616x353.png?t=1673947787",
-        "summary": "Fantasy game",
-        "_id": "3564027f-adcd-4425-b2c0-1253d2386c0c"
+    "35c62d76-8152-4626-8712-eeb96381bea8": {
+        "make": "Dodge",
+        "model": "Charger",
+        "production": "1970",
+        "mileage": "10000",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu3kQ4SUIMfdc3GG24e-zzpSx75hmi7QVZ_LQwZ8L5xax_H4Hi21p0w7f75gJ0dD1H5mo&usqp=CAU",
+        "description": "badass car",
+        "_createdOn": 1701873996907,
+        "_id": "29149d43-8a86-44a4-a6f4-28f34935d361"
     },
-    "c64db398-91cd-487c-b900-86058c0422f8": {
-        "title": "Action game",
-        "category": "Action",
-        "maxLevel": "40",
-        "imageUrl": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2022/01/action-adventure-games-tomb-raider.jpg",
-        "summary": "Summary here",
-        "_id": "c64db398-91cd-487c-b900-86058c0422f8"
-    },
-    "daf55cd4-9aa1-4b7a-82a9-fbdb74aaa84b": {
-        "title": "asdasd",
-        "category": "asdasd",
-        "maxLevel": "1213",
-        "imageUrl": "https://img.freepik.com/free-vector/joystick-game-sport-technology_138676-2045.jpg?w=2000",
-        "summary": "asdasdasd",
-        "_id": "daf55cd4-9aa1-4b7a-82a9-fbdb74aaa84b"
-    },
-    "18bfdb21-333b-42bd-a32c-c114263f2569": {
-        "title": "adsfasdfasd",
-        "category": "asdfasdf",
-        "maxLevel": "123",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Ultimate_MK3.png/220px-Ultimate_MK3.png",
-        "summary": "MK3",
-        "_id": "18bfdb21-333b-42bd-a32c-c114263f2569"
+    
+    "b471bff2-e445-4a66-91c2-8264d2610d6b": {
+        "make": "Dodge",
+        "model": "Dart",
+        "production": "1971",
+        "mileage": "50000",
+        "image": "https://images.classic.com/vehicles/15cd5d895a1128bf18379318000412c4fc53829c.jpg?auto=format",
+        "description": "test",
+        "_createdOn": 1701884880180,
+        "_id": "70d157c6-9b8a-4f34-9da7-5f938c381111"
     }
 }

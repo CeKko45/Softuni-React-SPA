@@ -5,7 +5,7 @@ export default function CarListItem({
     make,
     model,
     production,
-    imageUrl,
+    image,
     mileage
 }) {
     return (
@@ -13,7 +13,7 @@ export default function CarListItem({
 
             <div className="added-cars-in-catalog">
                 <Link to={`/cars/${_id}`}>
-                    <img src={imageUrl} className="picture-added-cars" />
+                    <img src={image} className="picture-added-cars" />
                 </Link>
                 <h3>{make} {model} {production}</h3>
                 <span>{mileage} Miles</span>
