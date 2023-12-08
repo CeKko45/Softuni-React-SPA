@@ -17,6 +17,7 @@ export default function CarDetails() {
     const [comments, dispatch] = useReducer(reducer, []);
     const { carId } = useParams();
 
+
     useEffect(() => {
         carService.getOne(carId)
             .then(setCar);
@@ -50,7 +51,7 @@ export default function CarDetails() {
         if (hasConfirmed) {
             await carService.remove(carId);
 
-            navigate('/cars');
+            navigate(Path.CarList);
         }
     }
 
@@ -65,14 +66,13 @@ export default function CarDetails() {
                 <div className="info"><img src={car.image} /></div>
 
                 <div className="info">
-                    <h3>Year of Production: {car.production}</h3>
-                    <h3>Mileage: {car.mileage}</h3>
-                    <h3>
-                        Description: {car.description}
-                    </h3>
+                    <h2>Year of Production: {car.production}</h2>
+                    <h2>Mileage: {car.mileage}</h2>
+                    <h2>Description: {car.description}</h2>
                 </div>
 
                 {userId === car._ownerId && (
+
                     <div className="buttons">
 
                         <Link to={pathToUrl(Path.CarEdit, { carId })}>
@@ -83,23 +83,26 @@ export default function CarDetails() {
                     </div>
                 )}
 
+                {isAuthenticated && (
 
-                <article className="create-comment">
-                    <h2>Add new comment:</h2>
-                    <form className="form" onSubmit={onSubmit}>
-                        <textarea
-                            name="comment"
-                            value={values.comment}
-                            onChange={onChange}
-                            placeholder="Comment......"
-                        ></textarea>
-                        <input className="btn submit" type="submit" value="Add Comment" />
-                    </form>
-                </article>
+                    <article className="create-comment">
+                        <h2>Add new comment:</h2>
+                        <form className="form" onSubmit={onSubmit}>
+                            <textarea
+                                name="comment"
+                                value={values.comment}
+                                onChange={onChange}
+                                placeholder="Comment......"
+                            ></textarea>
+                            <input className="btn submit" type="submit" value="Add Comment" />
+                        </form>
+                    </article>
+
+                )}
 
 
                 < div className="details-comments">
-                    <h2>Comments:</h2>
+                    <h1>Comments:</h1>
                     <ul>
                         {comments.map(({ _id, text, owner: { username } }) => (
                             <li key={_id} className="comment">
