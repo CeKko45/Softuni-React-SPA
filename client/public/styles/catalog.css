@@ -120,9 +120,10 @@ input {
 }
 
 .added-cars {
-  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  display: inline-block;
+
 }
 
 h3 {

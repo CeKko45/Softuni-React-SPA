@@ -12,7 +12,7 @@ import Path from "../../paths";
 
 export default function CarDetails() {
     const navigate = useNavigate();
-    const { username, userId } = useContext(AuthContext);
+    const { username, userId, isAuthenticated } = useContext(AuthContext);
     const [car, setCar] = useState({});
     const [comments, dispatch] = useReducer(reducer, []);
     const { carId } = useParams();
@@ -97,7 +97,8 @@ export default function CarDetails() {
                     </form>
                 </article>
 
-                <div className="details-comments">
+
+                < div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
                         {comments.map(({ _id, text, owner: { username } }) => (
@@ -116,6 +117,6 @@ export default function CarDetails() {
 
 
             </div>
-        </section>
+        </section >
     )
 }
