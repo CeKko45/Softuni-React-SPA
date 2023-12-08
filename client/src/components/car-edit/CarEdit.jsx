@@ -1,18 +1,35 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import * as carService from "../../services/carService";
 import Path from "../../paths";
 
-export default function CarCreate() {
+export default function CarEdit() {
     const navigate = useNavigate();
+    const { carId } = useParams();
+    const [car, setCar] = useState({
+        make: '',
+        model: '',
+        production: '',
+        mileage: '',
+        image: '',
+        description: '',
+    });
 
-    const createCarSubmitHandler = async (e) => {
+    useEffect(() => {
+        carService.getOne(carId)
+            .then(result => {
+                setCar(result);
+            });
+    }, [carId]);
+
+    const editCarSubmitHandler = async (e) => {
         e.preventDefault();
 
-        const carData = Object.fromEntries(new FormData(e.currentTarget));
+        const values = Object.fromEntries(new FormData(e.currentTarget));
 
         try {
-            await carService.create(carData);
+            await carService.edit(carId, values);
 
             navigate(Path.CarList);
         } catch (err) {
@@ -20,14 +37,23 @@ export default function CarCreate() {
         }
     }
 
+    const onChange = (e) => {
+        setCar(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    };
+
     return (
-        <section id="createPage">
-            <form id='createForm' onSubmit={createCarSubmitHandler}>
+        <section id="editPage">
+            <form id='editForm' onSubmit={editCarSubmitHandler}>
                 <label htmlFor="make">Make:</label>
                 <input
                     type="text"
                     id="make"
                     name="make"
+                    value={car.make}
+                    onChange={onChange}
                     placeholder="Make..."
                 />
 
@@ -36,6 +62,8 @@ export default function CarCreate() {
                     type="text"
                     id="model"
                     name="model"
+                    value={car.model}
+                    onChange={onChange}
                     placeholder="Model..."
                 />
 
@@ -44,6 +72,8 @@ export default function CarCreate() {
                     type="number"
                     id="production"
                     name="production"
+                    value={car.production}
+                    onChange={onChange}
                     placeholder="Year of Production..."
                 />
 
@@ -52,6 +82,8 @@ export default function CarCreate() {
                     type="number"
                     id="mileage"
                     name="mileage"
+                    value={car.mileage}
+                    onChange={onChange}
                     placeholder="Mileage..."
                 />
 
@@ -60,6 +92,8 @@ export default function CarCreate() {
                     type="text"
                     id="image"
                     name="image"
+                    value={car.image}
+                    onChange={onChange}
                     placeholder="Image..."
                 />
 
@@ -68,10 +102,11 @@ export default function CarCreate() {
                     type="text"
                     id="description"
                     name="description"
+                    value={car.description}
+                    onChange={onChange}
                     placeholder="Description..."
                 />
-
-                <input type="submit" className="create" value="Create Offer" />
+                <input type="submit" className="edit" value="Edit Offer" />
             </form>
         </section>
     );

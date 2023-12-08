@@ -13,6 +13,7 @@ import CarList from "./components/car-list/CarList";
 import CarCreate from "./components/car-create/CarCreate";
 import CarDetails from "./components/car-details/CarDetails";
 import ErrorPage from "./components/error-page/ErrorPage";
+import CarEdit from "./components/car-edit/CarEdit";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
           <Route element={<AuthGuard />}>
             <Route path={Path.Logout} element={<Logout />} />
             <Route path={Path.CarCreate} element={<CarCreate />} />
-            {/* <Route path={Path.CarEdit} element={<CarEdit/>} /> */}
+            <Route path={Path.CarEdit} element={<CarEdit />} />
 
           </Route>
           <Route path="*" element={<ErrorPage />} />
