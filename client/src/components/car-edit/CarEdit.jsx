@@ -55,6 +55,7 @@ export default function CarEdit() {
                     value={car.make}
                     onChange={onChange}
                     placeholder="Make..."
+                    required
                 />
 
                 <label htmlFor="model">Model:</label>
@@ -65,6 +66,7 @@ export default function CarEdit() {
                     value={car.model}
                     onChange={onChange}
                     placeholder="Model..."
+                    required
                 />
 
                 <label htmlFor="production">Year of Production:</label>
@@ -75,6 +77,9 @@ export default function CarEdit() {
                     value={car.production}
                     onChange={onChange}
                     placeholder="Year of Production..."
+                    min={1960}
+                    max={1975}
+                    required
                 />
 
                 <label htmlFor="mileage">Mileage:</label>
@@ -85,6 +90,7 @@ export default function CarEdit() {
                     value={car.mileage}
                     onChange={onChange}
                     placeholder="Mileage..."
+                    required
                 />
 
                 <label htmlFor="image">Image:</label>
@@ -95,6 +101,7 @@ export default function CarEdit() {
                     value={car.image}
                     onChange={onChange}
                     placeholder="Image..."
+                    required
                 />
 
                 <label htmlFor="description">Description:</label>
@@ -105,6 +112,7 @@ export default function CarEdit() {
                     value={car.description}
                     onChange={onChange}
                     placeholder="Description..."
+                    required
                 />
                 <input type="submit" className="edit" value="Edit Offer" />
             </form>

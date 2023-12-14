@@ -12,9 +12,37 @@
     text-align: center;
 }
 
+.introduction h2 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 35px;
+    text-align: center;
+}
+
 .introduction p {
     color: white;
     font-size: 20px;
     text-align: center;
 }
 
+.latest-cars {
+  display: inline-block;
+
+}
+
+.latest-cars-in-catalog {
+    color: white;
+    width: 400px;
+    border: 2px solid white;
+    display: inline-block;
+
+    text-align: center;
+    background: black;
+    height: 300px;
+  }
+  
+  .picture-latest-cars {
+    width: 350px;
+    height: 250px;
+  }
+  

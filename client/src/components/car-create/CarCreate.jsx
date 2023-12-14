@@ -28,7 +28,8 @@ export default function CarCreate() {
                     type="text"
                     id="make"
                     name="make"
-                    placeholder="Make..."
+                    placeholder="Make"
+                    required
                 />
 
                 <label htmlFor="model">Model:</label>
@@ -37,6 +38,7 @@ export default function CarCreate() {
                     id="model"
                     name="model"
                     placeholder="Model..."
+                    required
                 />
 
                 <label htmlFor="production">Year of Production:</label>
@@ -45,6 +47,9 @@ export default function CarCreate() {
                     id="production"
                     name="production"
                     placeholder="Year of Production..."
+                    min={1960}
+                    max={1975}
+                    required
                 />
 
                 <label htmlFor="mileage">Mileage:</label>
@@ -53,6 +58,7 @@ export default function CarCreate() {
                     id="mileage"
                     name="mileage"
                     placeholder="Mileage..."
+                    required
                 />
 
                 <label htmlFor="image">Image:</label>
@@ -60,7 +66,8 @@ export default function CarCreate() {
                     type="text"
                     id="image"
                     name="image"
-                    placeholder="Image..."
+                    placeholder="Image address"
+                    required
                 />
 
                 <label htmlFor="description">Description:</label>
@@ -69,6 +76,7 @@ export default function CarCreate() {
                     id="description"
                     name="description"
                     placeholder="Description..."
+                    required
                 />
 
                 <input type="submit" className="create" value="Create Offer" />

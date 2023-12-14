@@ -14,6 +14,15 @@ export const getOne = async (carId) => {
   return result;
 };
 
+export const getLatest = async () => {
+  const query = encodeURIComponent(`offset=0&pageSize=2`);
+  const result = await request.get(
+    `${baseUrl}?sortBy=_createdOn%20desc&${query}`
+  );
+
+  return result;
+};
+
 export const create = async (carData) => {
   const result = await request.post(baseUrl, carData);
 

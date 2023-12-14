@@ -28,9 +28,10 @@ export default function Register() {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="alex@abv.bg"
                     onChange={onChange}
                     value={values[RegisterFormKeys.Email]}
+                    required
                 />
 
                 <label htmlFor="username">Username:</label>
@@ -38,9 +39,11 @@ export default function Register() {
                     type="username"
                     id="username"
                     name="username"
-                    placeholder="Username"
+                    placeholder="Alex"
                     onChange={onChange}
                     value={values[RegisterFormKeys.Username]}
+                    pattern="^[A-Z].*"
+                    required
                 />
 
                 <label htmlFor="password">Password:</label>
@@ -51,6 +54,8 @@ export default function Register() {
                     placeholder="Password"
                     onChange={onChange}
                     value={values[RegisterFormKeys.Password]}
+                    minLength={6}
+                    required
                 />
 
                 <label htmlFor="con-pass">Confirm Password:</label>
@@ -61,6 +66,8 @@ export default function Register() {
                     placeholder="Confirm Password"
                     onChange={onChange}
                     value={values[RegisterFormKeys.ConfirmPassword]}
+                    minLength={6}
+                    required
                 />
 
                 <input type="submit" className="register" value="Register" />

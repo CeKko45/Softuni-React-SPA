@@ -21,9 +21,10 @@ export default function Login() {
                     type="email"
                     id="email"
                     name={LoginFormKyes.Email}
-                    placeholder="Email"
+                    placeholder="alex@abv.bg"
                     onChange={onChange}
                     value={values[LoginFormKyes.Email]}
+                    required
                 />
 
                 <label htmlFor="password">Password:</label>
@@ -34,6 +35,7 @@ export default function Login() {
                     placeholder="Password"
                     onChange={onChange}
                     value={values[LoginFormKyes.Password]}
+                    required
                 />
 
                 <input type="submit" className="register" value="Login" />
