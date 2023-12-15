@@ -8,7 +8,7 @@
 #detailsInfo {
   display: inline-block;
   margin-top: 1%;
-  background: rgba(0, 0, 0, 0.703);
+  background: black;
   width: 60%;
   height: 60%;
   border: 1px solid white;
@@ -25,7 +25,14 @@
 #detailsInfo h2 {
   font-size: 26px;
   color: white;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+#detailsInfo button {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 25px;
 }
 
 #detailsInfo h3 {
@@ -35,9 +42,15 @@
   display: inline-block;
 }
 
-.info img {
+.carInfo img {
   height: 70%;
   width: 70%;
+  position: relative;
+}
+
+.engineInfo img {
+  height: 50%;
+  width: 50%;
   position: relative;
 }
 

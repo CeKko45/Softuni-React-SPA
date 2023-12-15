@@ -63,7 +63,7 @@ export default function CarDetails() {
         <section id="detailsPage">
             <div id="detailsInfo">
                 <h1>{car.make} {car.model}</h1>
-                <div className="info"><img src={car.image} /></div>
+                <div className="carInfo"><img src={car.image} /></div>
 
                 <div className="info">
                     <h2>Year of Production: {car.production}</h2>

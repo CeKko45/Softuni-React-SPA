@@ -66,7 +66,7 @@ export default function CarCreate() {
                     type="text"
                     id="image"
                     name="image"
-                    placeholder="Image address"
+                    placeholder="Image Address..."
                     required
                 />
 

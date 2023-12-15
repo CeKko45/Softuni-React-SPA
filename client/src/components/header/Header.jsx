@@ -7,7 +7,6 @@ import Path from "../../paths";
 export default function Header() {
     const {
         isAuthenticated,
-        username,
     } = useContext(AuthContext);
 
 
@@ -16,17 +15,18 @@ export default function Header() {
             <nav>
 
                 <ul>
-                    <li><Link className="home" to={Path.Home}>Home</Link></li>
-                    <li><Link to={Path.CarList}>Catalog</Link></li>
+                    <li><Link to={Path.Home}>Home</Link></li>
+                    <li><Link to={Path.CarList}>Cars</Link></li>
+                    <li><Link to={Path.EngineList}>Engines</Link></li>
                     {isAuthenticated && (
-                        <div id="user">
+                        <div>
                             <li><Link to={Path.CarCreate}>Create Car</Link></li>
+                            <li><Link to={Path.EngineCreate}>Create Enigne</Link></li>
                             <li><Link to={Path.Logout}>Logout</Link></li>
-                            <span>| {username} |</span>
                         </div>
                     )}
                     {!isAuthenticated && (
-                        <div id="guest">
+                        <div>
                             <li><Link to={Path.Login}>Login</Link></li>
                             <li><Link to={Path.Register}>Register</Link></li>
                         </div>

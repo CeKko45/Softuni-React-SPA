@@ -8,6 +8,11 @@ const Path = {
   CarDetails: "/cars/:carId",
   CarEdit: "/cars/:carId/edit",
   CarDelete: "/cars/:carId/delete",
+  EngineList: "/engines",
+  EngineCreate: "/engines/create",
+  EngineDetails: "/engines/:engineId",
+  EngineEdit: "/engines/:engineId/edit",
+  EngineDelete: "/engines/:engineId/delete",
 };
 
 export default Path;

@@ -100,7 +100,7 @@ export default function CarEdit() {
                     name="image"
                     value={car.image}
                     onChange={onChange}
-                    placeholder="Image..."
+                    placeholder="Image Address..."
                     required
                 />
 

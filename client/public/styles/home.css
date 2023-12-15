@@ -1,48 +1,63 @@
 .introduction {
-    text-align: left;
-    width: 52%;
-    margin-top: 9%;
-    margin-left: 3%;
+  text-align: left;
+  width: 52%;
+  margin-top: 9%;
+  margin-left: 3%;
 }
 
 .introduction h1 {
-    color: white;
-    letter-spacing: 5px;
-    font-size: 50px;
-    text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  font-size: 50px;
+  text-align: center;
 }
 
 .introduction h2 {
-    color: white;
-    letter-spacing: 1px;
-    font-size: 35px;
-    text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 35px;
+  text-align: center;
 }
 
 .introduction p {
-    color: white;
-    font-size: 20px;
-    text-align: center;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 .latest-cars {
   display: inline-block;
-
 }
 
 .latest-cars-in-catalog {
-    color: white;
-    width: 400px;
-    border: 2px solid white;
-    display: inline-block;
+  color: white;
+  width: 400px;
+  border: 2px solid white;
+  display: inline-block;
 
-    text-align: center;
-    background: black;
-    height: 300px;
-  }
+  text-align: center;
+  background: black;
+  height: 300px;
+}
+
+.picture-latest-cars {
+  width: 350px;
+  height: 250px;
+}
+
+nav {
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 0;
   
-  .picture-latest-cars {
-    width: 350px;
-    height: 250px;
-  }
-  
+}
+
+.navigation-buttons {
+  text-align: center;
+  margin: 0 5px;
+  color: white;
+}

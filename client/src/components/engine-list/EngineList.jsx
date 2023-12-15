@@ -1,18 +1,20 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import * as carService from "../../services/carService";
+import * as engineService from "../../services/engineService";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../paths";
-import CarListItem from "./car-list-item/CarListItem";
+import EngineListItem from "./engine-list-item/EngineListItem";
 
-export default function CarList() {
-    const [cars, setCars] = useState([]);
+
+export default function EngineList() {
+    const [engines, setEngines] = useState([]);
     const { isAuthenticated } = useContext(AuthContext);
 
+
     useEffect(() => {
-        carService.getAll()
-            .then(result => setCars(result))
+        engineService.getAll()
+            .then(result => setEngines(result))
             .catch(err => {
                 console.log(err);
             });
@@ -21,23 +23,23 @@ export default function CarList() {
     return (
         <section id="viewCatalog" className="background-img">
 
-            {cars.map(car => (
-                <CarListItem key={car._id} {...car} />
+            {engines.map(engine => (
+                <EngineListItem key={engine._id} {...engine} />
             ))}
 
-            {cars.length === 0 && (
+            {engines.length === 0 && (
 
                 <div className="guest">
-                    There are no found cars...
+                    There are no engines yet...
                     <div>
-                        <img src="./images/no-added-cars.jpg" alt="img" />
+                        <img src="./images/no-added-engines.jpg" alt="img" />
                     </div>
                 </div>
             )}
 
             {isAuthenticated && (
-                <Link to={Path.CarCreate}>
-                    <h2 className="create-button">Create Car</h2>
+                <Link to={Path.EngineCreate}>
+                    <h2 className="create-button">Create Engine</h2>
                 </Link>
             )}
         </section>
