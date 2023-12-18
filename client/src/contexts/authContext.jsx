@@ -36,6 +36,8 @@ export const AuthProvider = ({
             localStorage.setItem('accessToken', result.accessToken);
 
             navigate(Path.Home);
+        } else {
+            throw "Password doesn't match"
         }
 
     };

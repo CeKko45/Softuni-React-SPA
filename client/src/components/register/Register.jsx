@@ -60,7 +60,7 @@ export default function Register() {
 
                 <label htmlFor="con-pass">Confirm Password:</label>
                 <input
-                    type="text"
+                    type="password"
                     id="confirm-password"
                     name="confirmPassword"
                     placeholder="Confirm Password"

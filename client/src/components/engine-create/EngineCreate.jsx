@@ -63,12 +63,12 @@ export default function EngineCreate() {
                     required
                 />
 
-                <label htmlFor="type">Type:</label>
+                <label htmlFor="type">Configuration:</label>
                 <input
                     type="text"
                     id="type"
                     name="type"
-                    placeholder="Type..."
+                    placeholder="Configuration..."
                     maxLength={10}
                     required
                 />
@@ -80,7 +80,7 @@ export default function EngineCreate() {
                     name="cylinders"
                     placeholder="Cylinders..."
                     min={1}
-                    max={20}
+                    max={16}
                     required
                 />
 
