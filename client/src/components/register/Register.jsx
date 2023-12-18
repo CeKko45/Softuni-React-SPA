@@ -7,7 +7,7 @@ const RegisterFormKeys = {
     Email: 'email',
     Username: 'username',
     Password: 'password',
-    ConfirmPassword: 'confirm-password',
+    ConfirmPassword: 'confirmPassword',
 };
 
 export default function Register() {
@@ -16,6 +16,7 @@ export default function Register() {
         [RegisterFormKeys.Email]: '',
         [RegisterFormKeys.Username]: '',
         [RegisterFormKeys.Password]: '',
+        [RegisterFormKeys.ConfirmPassword]: '',
     });
 
     return (
@@ -57,6 +58,17 @@ export default function Register() {
                     required
                 />
 
+                <label htmlFor="con-pass">Confirm Password:</label>
+                <input
+                    type="text"
+                    id="confirm-password"
+                    name="confirmPassword"
+                    placeholder="Confirm Password"
+                    onChange={onChange}
+                    value={values[RegisterFormKeys.ConfirmPassword]}
+                    minLength={6}
+                    required
+                />
 
                 <input type="submit" className="register" value="Register" />
             </form>
