@@ -9,7 +9,7 @@ import Path from "../../paths";
 
 export default function EngineDetails() {
     const navigate = useNavigate();
-    const { userId, } = useContext(AuthContext);
+    const { userId } = useContext(AuthContext);
     const [engine, setEngine] = useState({});
     const { engineId } = useParams();
 
@@ -41,6 +41,7 @@ export default function EngineDetails() {
                     <h2>Horsepower: {engine.horsepower}</h2>
                     <h2>Torque: {engine.torque}</h2>
                 </div>
+
 
                 {userId === engine._ownerId && (
 

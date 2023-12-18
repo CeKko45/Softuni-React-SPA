@@ -94,7 +94,8 @@ input {
   text-align: center;
   background: black;
   padding-bottom: 10px;
-  border-radius: 10px;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
   margin-left: 20px;
   margin-bottom: 20px;
   margin-top: 10px;
@@ -126,7 +127,8 @@ input {
   text-align: center;
   background: black;
   padding-bottom: 10px;
-  border-radius: 10px;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
   margin-left: 20px;
   margin-bottom: 20px;
   margin-top: 10px;
